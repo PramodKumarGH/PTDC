@@ -1,0 +1,32 @@
+<!-- Add this CSS to your stylesheet -->
+<style>
+.programs_section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.program_box {
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.program_box h5 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.program_box p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.program_box:hover {
+  background-color: #f1faff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+</style>
