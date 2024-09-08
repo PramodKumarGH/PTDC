@@ -181,14 +181,614 @@
           </div>
         </div>
         <div class="col-lg-7 col-md-6">
-          <div class="video-container">
-            <!-- Embed YouTube video using an iframe -->
-            <iframe 
-                src="https://www.youtube.com/embed/fFss_KlAkuE?si=dsRjV0jGrXqno_4A" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>
+          <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .our-team-section {
+                background: $primary1;
+                padding: 50px 0;
+            }
+            .our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.our-team:hover .team-content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+@media only screen and (max-width: 768px) {
+    .our-team {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+.our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.our-team-section {
+    position: relative;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.our-team:hover .team-content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+.nav-arrows {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-arrow {
+    background: #30a5ab;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background: #1e8a8a;
+}
+
+@media only screen and (max-width: 768px) {
+    .our-team {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+.our-team-section {
+    position: relative;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.our-team:hover .team-content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+.nav-arrows {
+    position: absolute;
+    bottom: -40px; /* Adjust this value based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-arrow {
+    background: #30a5ab;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 50px; /* Set width and height to make it square */
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    margin: 0 15px; /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow:hover {
+    background: #1e8a8a;
+}
+
+@media only screen and (max-width: 768px) {
+    .our-team {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+
+
+
+        </style>
+          <!-- Our Team Section -->
+          <!-- Our Team Section -->
+<section id="our-team" class="our-team-section">
+  <div class="container">
+      <h2 class="text-center">Meet Our Team</h2>
+      <div class="team-slider">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="our-team">
+                      <img src="images/faculty/anurag_mohit.png" alt="Anurag Mohit">
+                      <div class="over-layer">
+                          <div class="team-content">
+                              <h3 class="title">Anurag Mohit</h3>
+                              <span class="post">CEO</span>
+                              <p class="description">Anurag has over 32 years of experience in corporate leadership roles. As Co-Founder & CEO of FayrEdge, he focuses on delivering exceptional stakeholder experiences.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- second one -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="our-team">
+                      <img src="images/faculty/poornima.png" alt="Poornima">
+                      <div class="over-layer">
+                          <div class="team-content">
+                              <h3 class="title">Poornima</h3>
+                              <span class="post">COO</span>
+                              <p class="description">Poornima has extensive experience in HR and consulting, focusing on talent management and diversity.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- third one -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="our-team">
+                      <img src="images/faculty/rugmini_ganesh.png" alt="Rugmini Ganesh">
+                      <div class="over-layer">
+                          <div class="team-content">
+                              <h3 class="title">Rugmini Ganesh</h3>
+                              <span class="post">Senior Consultant</span>
+                              <p class="description">Rugmini specializes in strategic consulting with a focus on operational efficiency and business transformation.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="our-team">
+                      <img src="images/faculty/govardhan_rao.png" alt="Govardhan Rao">
+                      <div class="over-layer">
+                          <div class="team-content">
+                              <h3 class="title">Govardhan Rao</h3>
+                              <span class="post">Advisor</span>
+                              <p class="description">With over 42 years of experience in management and administration, Govardhan brings valuable insights as an advisor at FayrEdge.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
+          <!-- Navigation Arrows -->
+           <div class="nav-arrows">
+                <button class="nav-arrow prev-arrow">&#10094;</button>
+                <button class="nav-arrow next-arrow">&#10095;</button>
+            </div>
+      </div>
+  </div>
+</section>
+<!-- End Our Team Section -->
+
+<!-- End Our Team Section -->
+
         </div>
       </div>
     </div>
@@ -435,6 +1035,26 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.team-slider .row');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+
+    let scrollAmount = 0;
+
+    prevArrow.addEventListener('click', () => {
+        scrollAmount -= 300; // Adjust the value to scroll amount per click
+        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    nextArrow.addEventListener('click', () => {
+        scrollAmount += 300; // Adjust the value to scroll amount per click
+        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    });
+});
+</script>
+
 
 
   <script>
