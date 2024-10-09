@@ -954,13 +954,62 @@
     </div>
   </section>
    <!-- end client section -->
+   <style>
+    /* Style for input fields and textareas */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      color: #000; /* Text color */
+      background-color: #f2f2f2; /* Background color */
+      border: 1px solid #ccc; /* Border color */
+      padding: 10px; /* Padding for input fields */
+      margin: 10px 0; /* Spacing between fields */
+      width: 100%; /* Full width */
+      font-size: 16px; /* Font size */
+      border-radius: 5px; /* Rounded borders */
+    }
+  
+    /* Change placeholder color */
+    input::placeholder,
+    textarea::placeholder {
+      color: #777; /* Placeholder text color */
+    }
+  
+    /* Focused input field */
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none; /* Remove default focus outline */
+      border: 1px solid #555; /* Border color on focus */
+      background-color: #ffffff; /* Background color on focus */
+    }
+  
+    /* Style the submit button */
+    button[type="submit"] {
+      background-color: #007bff; /* Button color */
+      color: #fff; /* Text color */
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #0056b3; /* Darker button on hover */
+    }
+  </style>
+  
   <!-- contact section -->
   <section class="contact_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>Contact Us</h2>
       </div>
-      <form action="https://formsubmit.co/Savithriwork2024@hotmail.com" method="POST" />
+      <form action="https://formsubmit.co/Savithriwork2024@hotmail.com" method="POST">
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Name" required />
@@ -983,6 +1032,7 @@
       </form>
     </div>
   </section>
+  
 
   <!-- end contact section -->
 
