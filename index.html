@@ -180,23 +180,479 @@
             </p>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
+          <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            .our-team-section {
+                background: $primary1;
+                padding: 50px 0;
+            }
+            .our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.our-team:hover .team-content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+@media only screen and (max-width: 768px) {
+    .our-team {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+.our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.our-team-section {
+    position: relative;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.our-team {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.our-team:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.our-team img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #30a5ab;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover img {
+    opacity: 0.8;
+}
+
+.over-layer {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.our-team:hover .over-layer {
+    opacity: 1;
+}
+
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.our-team:hover .team-content {
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+.nav-arrows {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-arrow {
+    background: #30a5ab;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background: #1e8a8a;
+}
+.title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.post {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #f1c40f;
+}
+
+.description {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.social-links li {
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #30a5ab;
+}
+
+.nav-arrows {
+    position: absolute;
+    bottom: -40px; /* Adjust this value based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-arrow {
+    background: #30a5ab;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 50px; /* Set width and height to make it square */
+    height: 50px;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners for a softer look */
+    margin: 0 15px; /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-arrow:hover {
+    background: #1e8a8a;
+}
+
+@media only screen and (max-width: 768px) {
+    .our-team {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+        </style>
         
   <!-- end about section -->
-  <section class="client_sections ">
+  <section class="client_section ">
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
                 Meet Our Team
             </h2>
         </div>
-        <div class="carousel-wraps layout_padding2-top ">
-            <div class="owl-carousels">
-                <div class="items">
-                    <div class="square-box">
+        <div class="carousel-wrap layout_padding2-top ">
+            <div class="owl-carousel">
+                <div class="item">
+                    <div class="box">
                         <div class="client_id">
                             <div class="img-box">
                                 <a href="anurag_mohit.html">
@@ -206,11 +662,15 @@
                             <div class="client_detail">
                                 <div class="client_info">
                                     <a href="anurag_mohit.html">
-                                        <h5>Anurag Mohit</h5>
+                                        <h6>Anurag Mohit</h6>
                                     </a>
-                                    
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
                                 </div>
-                              
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="client_text">
@@ -220,8 +680,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="items">
-                    <div class="square-box">
+                <div class="item">
+                    <div class="box">
                         <div class="client_id">
                             <div class="img-box">
                                 <a href="poornima.html">
@@ -231,11 +691,15 @@
                             <div class="client_detail">
                                 <div class="client_info">
                                     <a href="poornima.html">
-                                        <h5>Poornima Batish</h5>
+                                        <h6>Poornima Batish</h6>
                                     </a>
-                                    
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
                                 </div>
-                               
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="client_text">
@@ -245,8 +709,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="items">
-                  <div class="square-box">
+                <div class="item">
+                  <div class="box">
                       <div class="client_id">
                           <div class="img-box">
                               <a href="venkatesan.html">
@@ -256,11 +720,15 @@
                           <div class="client_detail">
                               <div class="client_info">
                                   <a href="venkatesan.html">
-                                      <h5>G Venkatesan</h5>
+                                      <h6>G Venkatesan</h6>
                                   </a>
-                                 
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
                               </div>
-                              
+                              <i class="fa fa-quote-left" aria-hidden="true"></i>
                           </div>
                       </div>
                       <div class="client_text">
@@ -270,8 +738,8 @@
                       </div>
                   </div>
               </div>
-                <div class="items">
-                    <div class="square-box">
+                <div class="item">
+                    <div class="box">
                         <div class="client_id">
                             <div class="img-box">
                                 <a href="rugmini_ganesh.html">
@@ -281,11 +749,15 @@
                             <div class="client_detail">
                                 <div class="client_info">
                                     <a href="rugmini_ganesh.html">
-                                        <h5>Rugmini Ganesh</h5>
+                                        <h6>Rugmini Ganesh</h6>
                                     </a>
-                                    
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
                                 </div>
-                                
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="client_text">
@@ -295,8 +767,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="items">
-                  <div class="square-box">
+                <div class="item">
+                  <div class="box">
                       <div class="client_id">
                           <div class="img-box">
                               <a href="sudha_thakur.html">
@@ -306,11 +778,15 @@
                           <div class="client_detail">
                               <div class="client_info">
                                   <a href="sudha_thakur.html">
-                                      <h5>Sudha Thakur</h5>
+                                      <h6>Sudha Thakur</h6>
                                   </a>
-                                 
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
                               </div>
-                              
+                              <i class="fa fa-quote-left" aria-hidden="true"></i>
                           </div>
                       </div>
                       <div class="client_text">
@@ -320,8 +796,8 @@
                       </div>
                   </div>
               </div>
-                <div class="items">
-                    <div class="square-box">
+                <div class="item">
+                    <div class="box">
                         <div class="client_id">
                             <div class="img-box">
                                 <a href="govardhan_rao.html">
@@ -331,11 +807,15 @@
                             <div class="client_detail">
                                 <div class="client_info">
                                     <a href="govardhan_rao.html">
-                                        <h5>Govardhan Rao</h5>
+                                        <h6>Govardhan Rao</h6>
                                     </a>
-                                    
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
                                 </div>
-                               
+                                <i class="fa fa-quote-left" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="client_text">
