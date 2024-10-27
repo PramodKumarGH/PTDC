@@ -154,11 +154,7 @@
       <div class="heading_container heading_center">
         <h2>Contact Us</h2>
       </div>
-      <form action="https://submit-form.com/NolmFKt43">
-        <!-- Disable reCAPTCHA -->
-        <!-- <input type="hidden" name="_captcha" value="false"> -->
-        <!-- <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html"> -->
-        
+      <form action="https://submit-form.com/NolmFKt43" method="POST" onsubmit="clearForm(this)">
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Name" required />
@@ -180,7 +176,14 @@
         </div>
       </form>
     </div>
+  
+    <script>
+      function clearForm(form) {
+        form.reset(); // Reset the form fields
+      }
+    </script>
   </section>
+  
   
   
 
