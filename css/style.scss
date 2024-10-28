@@ -499,6 +499,7 @@ a:focus {
   position: relative;
 
   .box {
+    height: 80%; /* Ensures equal height */
     margin-top: 30px;
     text-align: center;
     box-shadow: 0 0 5px 2px rgba($color: $black, $alpha: .15);
