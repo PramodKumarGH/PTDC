@@ -1,1145 +1,676 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="training, development, workshops, content writing, customer care" />
-    <meta name="description" content="Professional Training and Development Center offers personalized training, content writing, and workshops to enhance your skills and knowledge." />
-    <meta name="author" content="Professional Training and Development Center" />
-    <title>Professional Training and Development Center</title>
-    <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <!-- font awesome style -->
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
-    <style>
-      /* Style the container holding the video */
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="training, development, workshops, content writing, customer care" />
+  <meta name="description" content="Professional Training and Development Center offers personalized training, content writing, and workshops to enhance your skills and knowledge." />
+  <meta name="author" content="Professional Training and Development Center" />
+  <title>Professional Training and Development Center</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    /* Style the container holding the video */
+    .video-container {
+      max-width: 100%;
+      width: 640px; /* Adjust width as needed */
+      margin: 20px auto; /* Center the video and add some space above and below */
+      padding: 10px; /* Padding inside the border */
+      background-color: #ADD8E6; /* Light background color */
+      border: 1px solid #ccc; /* Gray border */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    /* Responsive iframe to keep the aspect ratio */
+    .video-container iframe {
+      width: 100%;
+      height: 360px; /* Height adjusted for 16:9 aspect ratio */
+      border: none; /* Remove default iframe border */
+    }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 768px) {
       .video-container {
-        max-width: 100%;
-        width: 640px;
-        /* Adjust width as needed */
-        margin: 20px auto;
-        /* Center the video and add some space above and below */
-        padding: 10px;
-        /* Padding inside the border */
-        background-color: #ADD8E6;
-        /* Light background color */
-        border: 1px solid #ccc;
-        /* Gray border */
-        border-radius: 8px;
-        /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Subtle shadow for depth */
-      }
-
-      /* Responsive iframe to keep the aspect ratio */
-      .video-container iframe {
         width: 100%;
-        height: 360px;
-        /* Height adjusted for 16:9 aspect ratio */
-        border: none;
-        /* Remove default iframe border */
+        height: auto;
       }
 
-      /* Responsive styles */
-      @media only screen and (max-width: 768px) {
-        .video-container {
-          width: 100%;
-          height: auto;
-        }
-
-        .img-box img {
-          width: 100%;
-          height: auto;
-        }
-
-        .navbar-nav {
-          text-align: center;
-        }
-
-        .navbar-toggler {
-          margin: 0 auto;
-        }
-
-        .about_section,
-        .professional_section,
-        .service_section,
-        .client_section {
-          padding: 20px;
-        }
+      .img-box img {
+        width: 100%;
+        height: auto;
       }
-    </style>
-  </head>
-  <body>
-    <div class="hero_area">
-      <!-- header section starts -->
-      <header class="header_section">
-        <div class="header_top">
-          <div class="container-fluid">
-            <div class="contact_nav">
-              <a href="tel:+919869478843">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span> Call : +91 98694 78843 </span>
-              </a>
-              <a href=" https://www.facebook.com/profile.php?id=61566824381050" target="_blank" aria-label="Facebook">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.youtube.com/@savithrismani9957" target="_blank" aria-label="YouTube">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/training1733/" target="_blank" aria-label="Instagram">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="mailto:Training@ptdc.in">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> Email : Training@ptdc.in </span>
-              </a>
-            </div>
+
+      .navbar-nav {
+        text-align: center;
+      }
+
+      .navbar-toggler {
+        margin: 0 auto;
+      }
+
+      .about_section, .professional_section, .service_section, .client_section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="tel:+919869478843">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +91 98694 78843
+              </span>
+            </a>
+            <a href="https://www.facebook.com/YourPage" target="_blank" aria-label="Facebook">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/YourChannel" target="_blank" aria-label="YouTube">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:Training@ptdc.in">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : Training@ptdc.in
+              </span>
+            </a>
           </div>
         </div>
-        <div class="header_bottom">
-          <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-              <a class="navbar-brand" href="index.html" aria-label="Homepage">
-                <img src="images/logo.png" alt="Professional Training and Development Center Logo" style="width: 150px; height: 70px;" />
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="about.html">Programmes</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="service.html">Services</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <!-- end header section -->
-      <!-- slider section -->
-      <section class="slider_section ">
-        <div class="container ">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="detail-box">
-                <h1> Professional Training <br> and Development Center <br>
-                </h1>
-                <p> At the Professional Training and Development Center, we leverage 30 years of experience to empower individuals and organizations through expert training and content services, helping them reach their full potential. </p>
-                <a href="contact.html"> Contact Us </a>
-              </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html" aria-label="Homepage">
+              <div class="logo-container">
+                <img src="images/preview.png" alt="Logo" class="logo">
             </div>
-            <div class="col-md-6">
-              <div class="img-box">
-                <img src="images/photo.png" alt="Professional Training and Development Center Image">
-              </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Programmes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Gallery</a>
+                </li>
+              </ul>
             </div>
-          </div>
+          </nav>
         </div>
-      </section>
-      <!-- end slider section -->
     </div>
-    <!-- about section -->
-    <section class="about_section layout_padding-bottom" style="text-align: center;margin-top: 50px;">
-      <div class="container">
+
+
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container ">
         <div class="row">
-          <div class="col-lg-7 col-md-7">
+          <div class="col-md-6">
             <div class="detail-box">
-              <h2 style="text-align: center;"> About Us </h2>
-              <p> At the Professional Training and Development Center, we bring 30 years of expertise in education and personal development. Our mission is to empower individuals and organizations to grow through tailored training and expert content services. With a focus on customization, integrity, and excellence, we are your trusted partner in achieving success. </p>
+              <h1>
+                Professional Training <br>
+                and Development Center <br>
+              </h1>
+              <p>
+                At the Professional Training and Development Center, we leverage 30 years of experience to empower individuals and organizations through expert training and content services, helping them reach their full potential.
+              </p>
+              <a href="contact.html">
+                Contact Us
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="images/photo.png" alt="Professional Training and Development Center Image">
             </div>
           </div>
         </div>
       </div>
     </section>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-      }
-
-      .our-team-section {
-        background: $primary1;
-        padding: 50px 0;
-      }
-
-      .our-team-section h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 40px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .our-team {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background-color: #fff;
-        margin: 0 auto;
-        max-width: 100%;
-      }
-
-      .our-team:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .our-team img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 4px solid #30a5ab;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover img {
-        opacity: 0.8;
-      }
-
-      .over-layer {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover .over-layer {
-        opacity: 1;
-      }
-
-      .team-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        color: #fff;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.7);
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-      }
-
-      .our-team:hover .team-content {
-        transform: translateY(0);
-      }
-
-      .title {
-        font-size: 1.6rem;
-        font-weight: bold;
-        margin: 0;
-        color: #fff;
-      }
-
-      .post {
-        font-size: 1.2rem;
-        margin: 10px 0;
-        color: #f1c40f;
-      }
-
-      .description {
-        font-size: 1rem;
-        margin: 10px 0;
-        line-height: 1.5;
-      }
-
-      .social-links {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-      }
-
-      .social-links li {
-        margin: 0 10px;
-      }
-
-      .social-links a {
-        color: #fff;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-links a:hover {
-        color: #30a5ab;
-      }
-
-      @media only screen and (max-width: 768px) {
-        .our-team {
-          margin-bottom: 20px;
-          max-width: 100%;
-        }
-      }
-
-      .our-team-section h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 40px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .team-slider {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .our-team {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background-color: #fff;
-        margin: 0 auto;
-      }
-
-      .our-team:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .our-team img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 4px solid #30a5ab;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover img {
-        opacity: 0.8;
-      }
-
-      .over-layer {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team-section h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 40px;
-        font-weight: 600;
-        text-align: center;
-        text-transform: uppercase;
-      }
-
-      .team-slider {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .our-team {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background-color: #fff;
-        margin: 0 auto;
-      }
-
-      .our-team:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .our-team img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 4px solid #30a5ab;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover img {
-        opacity: 0.8;
-      }
-
-      .over-layer {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover .over-layer {
-        opacity: 1;
-      }
-
-      .our-team-section {
-        position: relative;
-      }
-
-      .team-slider {
-        position: relative;
-        overflow: hidden;
-      }
-
-      .our-team {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        background-color: #fff;
-        margin: 0 auto;
-      }
-
-      .our-team:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .our-team img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-bottom: 4px solid #30a5ab;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover img {
-        opacity: 0.8;
-      }
-
-      .over-layer {
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .our-team:hover .over-layer {
-        opacity: 1;
-      }
-
-      .team-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        color: #fff;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.7);
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-      }
-
-      .our-team:hover .team-content {
-        transform: translateY(0);
-      }
-
-      .title {
-        font-size: 1.6rem;
-        font-weight: bold;
-        margin: 0;
-        color: #fff;
-      }
-
-      .post {
-        font-size: 1.2rem;
-        margin: 10px 0;
-        color: #f1c40f;
-      }
-
-      .description {
-        font-size: 1rem;
-        margin: 10px 0;
-        line-height: 1.5;
-      }
-
-      .social-links {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-      }
-
-      .social-links li {
-        margin: 0 10px;
-      }
-
-      .social-links a {
-        color: #fff;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-links a:hover {
-        color: #30a5ab;
-      }
-
-      .nav-arrows {
-        position: absolute;
-        bottom: -30px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-      }
-
-      .nav-arrow {
-        background: #30a5ab;
-        border: none;
-        color: #fff;
-        font-size: 2rem;
-        padding: 15px;
-        cursor: pointer;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background 0.3s ease;
-      }
-
-      .nav-arrow:hover {
-        background: #1e8a8a;
-      }
-
-      .title {
-        font-size: 1.6rem;
-        font-weight: bold;
-        margin: 0;
-        color: #fff;
-      }
-
-      .post {
-        font-size: 1.2rem;
-        margin: 10px 0;
-        color: #f1c40f;
-      }
-
-      .description {
-        font-size: 1rem;
-        margin: 10px 0;
-        line-height: 1.5;
-      }
-
-      .social-links {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-      }
-
-      .social-links li {
-        margin: 0 10px;
-      }
-
-      .social-links a {
-        color: #fff;
-        font-size: 1.5rem;
-        transition: color 0.3s ease;
-      }
-
-      .social-links a:hover {
-        color: #30a5ab;
-      }
-
-      .nav-arrows {
-        position: absolute;
-        bottom: -40px;
-        /* Adjust this value based on your design */
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        justify-content: center;
-        width: 100%;
-      }
-
-      .nav-arrow {
-        background: #30a5ab;
-        border: none;
-        color: #fff;
-        font-size: 1.5rem;
-        width: 50px;
-        /* Set width and height to make it square */
-        height: 50px;
-        cursor: pointer;
-        border-radius: 8px;
-        /* Rounded corners for a softer look */
-        margin: 0 15px;
-        /* Space between buttons */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: background 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .nav-arrow:hover {
-        background: #1e8a8a;
-      }
-
-      @media only screen and (max-width: 768px) {
-        .our-team {
-          margin-bottom: 20px;
-          max-width: 100%;
-        }
-      }
-    </style>
-    <!-- end about section -->
-
-    <!-- Our Team Section -->
-    <section class="client_section ">
-      <section class="client_section ">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h2> Meet Our Team </h2>
-          </div>
-          <div class="carousel-wrap layout_padding2-top ">
-            <div class="owl-carousel">
-              <!-- paste your content here for adding a new faculty!! -->
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/anurag_mohit.html">
-                        <img src="images/faculty/anurag_mohit.png" alt="Anurag Mohit">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/anurag_mohit.html">
-                          <h6>Anurag Mohit</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> Anurag has over 32 years of experience in corporate leadership. He focuses on delivering exceptional stakeholder experiences. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/poornima.html">
-                        <img src="images/faculty/poornima.png" alt="Poornima Batish">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/poornima.html">
-                          <h6>Poornima Batish</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> Poornima has extensive experience in HR and consulting, focusing on talent management and diversity. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/venkatesan.html">
-                        <img src="images/faculty/venkatesan.png" alt="Venkatesan">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/venkatesan.html">
-                          <h6>G Venkatesan</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> Shri G. Venkatesan has 36 years of HR experience, training expertise, and a law degree in public policy management. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/rugmini_ganesh.html">
-                        <img src="images/faculty/rugmini_ganesh.png" alt="Rugmini Ganesh">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/rugmini_ganesh.html">
-                          <h6>Rugmini Ganesh</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> Rugmini specializes in strategic consulting with a focus on operational efficiency and business transformation. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/sudha_thakur.html">
-                        <img src="images/faculty/sudha_thakur.png" alt="Sudha Thakur">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/sudha_thakur.html">
-                          <h6>Sudha Thakur</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> Ms. Sudha Thakur is an entrepreneur with an MBA in HR and over 10 years of experience in hospitality and business development. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <a href="faculty/govardhan_rao.html">
-                        <img src="images/faculty/govardhan_rao.png" alt="Govardhan Rao">
-                      </a>
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <a href="faculty/govardhan_rao.html">
-                          <h6>Govardhan Rao</h6>
-                        </a>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> With over 42 years of experience in management and administration, Govardhan brings valuable insights as an advisor. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Our Team Section -->
-      <!-- professional section -->
-      <section class="professional_section layout_padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="img-box">
-                <img src="images/image.png" alt="Professional Image">
-              </div>
-            </div>
-            <div class="col-md-6 ">
-              <div class="detail-box">
-                <h2> Why Choose Us? </h2>
-                <ul>
-                  <li>
-                    <strong>30 Years of Expertise:</strong> With three decades of experience, we bring a deep understanding of teaching, personal development, and content creation to every project.
-                  </li>
-                  <li>
-                    <strong>Tailored Solutions:</strong> We understand that every individual and business is unique. Our services are customized to fit your specific needs and objectives.
-                  </li>
-                  <li>
-                    <strong>Proven Success:</strong> Our track record speaks for itself. We have helped numerous clients achieve their goals through our focused and effective training and content strategies.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end professional section -->
-      <!-- service section -->
-      <section class="service_section layout_padding">
-        <div class="container ">
-          <div class="heading_container heading_center">
-            <h2> Our Services </h2>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="box">
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <h3>Content Writing</h3>
-                <p>Professional content creation that engages your audience and drives results.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="box">
-                <i class="fa fa-laptop" aria-hidden="true"></i>
-                <h3>Training Workshops</h3>
-                <p>Interactive workshops designed to enhance skills and knowledge.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="box">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <h3>Personal Development</h3>
-                <p>Guidance and strategies for personal growth and professional success.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end service section -->
-      <!-- client section -->
-      <section class="client_section ">
-        <div class="container">
-          <div class="heading_container heading_center">
-            <h2> What Our Clients Say </h2>
-          </div>
-          <div class="carousel-wrap layout_padding2-top ">
-            <div class="owl-carousel">
-              <!-- paste your content here to add a new cleint review -->
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <img src="images/prem.png" alt="">
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <h6> Prem Kumar </h6>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> The personalized training programs from the Professional Training and Development Center were a game-changer for our team. The tailored approach helped us address our specific challenges and achieve significant growth. Highly recommended </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <img src="images/pramod.jpg" alt="">
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <h6> Pramod </h6>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> The content created for our website was exceptional. It perfectly captured our brand’s voice and engaged our audience effectively. We saw a noticeable increase in traffic and engagement. Thank you for the outstanding work </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <img src="images/anu.jpg" alt="">
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <h6> Anu </h6>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> The workshops provided by the Professional Training and Development Center were incredibly insightful and practical. The skills we gained have already made a positive impact on our team's performance. We look forward to more sessions </p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box">
-                  <div class="client_id">
-                    <div class="img-box">
-                      <img src="images/divya.jpg" alt="">
-                    </div>
-                    <div class="client_detail">
-                      <div class="client_info">
-                        <h6> Divya </h6>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                      </div>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                  <div class="client_text">
-                    <p> The content writing services exceeded our expectations. The quality and precision of the content helped us connect better with our audience and strengthen our online presence. We couldn't be happier with the results </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end client section -->
-      <style>
-        /* Style for input fields and textareas */
-        input[type="text"],
-        input[type="tel"],
-        input[type="email"],
-        textarea {
-          color: #000;
-          /* Text color */
-          background-color: #f2f2f2;
-          /* Background color */
-          border: 1px solid #ccc;
-          /* Border color */
-          padding: 10px;
-          /* Padding for input fields */
-          margin: 10px 0;
-          /* Spacing between fields */
-          width: 100%;
-          /* Full width */
-          font-size: 16px;
-          /* Font size */
-          border-radius: 5px;
-          /* Rounded borders */
-        }
-
-        /* Change placeholder color */
-        input::placeholder,
-        textarea::placeholder {
-          color: #777;
-          /* Placeholder text color */
-        }
-
-        /* Focused input field */
-        input[type="text"]:focus,
-        input[type="tel"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-          outline: none;
-          /* Remove default focus outline */
-          border: 1px solid #555;
-          /* Border color on focus */
-          background-color: #ffffff;
-          /* Background color on focus */
-        }
-
-        /* Style the submit button */
-        button[type="submit"] {
-          background-color: #007bff;
-          /* Button color */
-          color: #fff;
-          /* Text color */
-          border: none;
-          padding: 15px 32px;
-          text-align: center;
-          font-size: 16px;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-          background-color: #0056b3;
-          /* Darker button on hover */
-        }
-      </style>
-      <!-- contact section -->
-      <section class="contact_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>Contact Us</h2>
-    </div>
-    <form action="https://submit-form.com/NolmFKt43" method="POST" onsubmit="resetFormWithDelay(event, this)">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Name" required />
-      </div>
-      <div>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Email" required />
-      </div>
-      <div>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Message" required></textarea>
-      </div>
-      <div class="d-flex">
-        <button type="submit">SEND</button>
-      </div>
-    </form>
+    <!-- end slider section -->
   </div>
 
-  <script>
-    function resetFormWithDelay(event, form) {
-      event.preventDefault(); // Prevent default form submission temporarily
+  <!-- about section -->
+  <section class="about_section layout_padding-bottom" style="text-align: center;margin-top: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-md-7">
+          <div class="detail-box">
+            <h2 style="text-align: center;">
+              About Us
+            </h2>
+            <p>
+              At the Professional Training and Development Center, we bring 30 years of expertise in education and personal development. Our mission is to empower individuals and organizations to grow through tailored training and expert content services. With a focus on customization, integrity, and excellence, we are your trusted partner in achieving success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Submit the form after a brief delay and reset it
-      setTimeout(() => {
-        form.submit(); // Submit the form
-        form.reset();  // Reset the form fields
-      }, 1000); 
-    }
-  </script>
+        
+  <!-- end about section -->
+  <section class="client_sections ">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Meet Our Team
+            </h2>
+        </div>
+        <div class="carousel-wraps layout_padding2-top ">
+            <div class="owl-carousels">
+                <div class="items">
+                    <div class="square-box">
+                        <div class="client_id">
+                            <div class="img-box">
+                                <a href="anurag_mohit.html">
+                                    <img src="images/faculty/anurag_mohit.png" alt="Anurag Mohit">
+                                </a>
+                            </div>
+                            <div class="client_detail">
+                                <div class="client_info">
+                                    <a href="anurag_mohit.html">
+                                        <h5>Anurag Mohit</h5>
+                                    </a>
+                                    
+                                </div>
+                              
+                            </div>
+                        </div>
+                        <div class="client_text">
+                            <p>
+                                Anurag has over 32 years of experience in corporate leadership. He focuses on delivering exceptional stakeholder experiences.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="square-box">
+                        <div class="client_id">
+                            <div class="img-box">
+                                <a href="poornima.html">
+                                    <img src="images/faculty/poornima.png" alt="Poornima Batish">
+                                </a>
+                            </div>
+                            <div class="client_detail">
+                                <div class="client_info">
+                                    <a href="poornima.html">
+                                        <h5>Poornima Batish</h5>
+                                    </a>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="client_text">
+                            <p>
+                                Poornima has extensive experience in HR and consulting, focusing on talent management and diversity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                  <div class="square-box">
+                      <div class="client_id">
+                          <div class="img-box">
+                              <a href="venkatesan.html">
+                                  <img src="images/faculty/venkatesan.png" alt="Venkatesan">
+                              </a>
+                          </div>
+                          <div class="client_detail">
+                              <div class="client_info">
+                                  <a href="venkatesan.html">
+                                      <h5>G Venkatesan</h5>
+                                  </a>
+                                 
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="client_text">
+                          <p>
+                            Shri G. Venkatesan has 36 years of HR experience, training expertise, and a law degree in public policy management.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+                <div class="items">
+                    <div class="square-box">
+                        <div class="client_id">
+                            <div class="img-box">
+                                <a href="rugmini_ganesh.html">
+                                    <img src="images/faculty/rugmini_ganesh.png" alt="Rugmini Ganesh">
+                                </a>
+                            </div>
+                            <div class="client_detail">
+                                <div class="client_info">
+                                    <a href="rugmini_ganesh.html">
+                                        <h5>Rugmini Ganesh</h5>
+                                    </a>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="client_text">
+                            <p>
+                                Rugmini specializes in strategic consulting with a focus on operational efficiency and business transformation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                  <div class="square-box">
+                      <div class="client_id">
+                          <div class="img-box">
+                              <a href="sudha_thakur.html">
+                                  <img src="images/faculty/sudha_thakur.png" alt="Sudha Thakur">
+                              </a>
+                          </div>
+                          <div class="client_detail">
+                              <div class="client_info">
+                                  <a href="sudha_thakur.html">
+                                      <h5>Sudha Thakur</h5>
+                                  </a>
+                                 
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="client_text">
+                          <p>
+                            Ms. Sudha Thakur is an entrepreneur with an MBA in HR and over 10 years of experience in hospitality and business development.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+                <div class="items">
+                    <div class="square-box">
+                        <div class="client_id">
+                            <div class="img-box">
+                                <a href="govardhan_rao.html">
+                                    <img src="images/faculty/govardhan_rao.png" alt="Govardhan Rao">
+                                </a>
+                            </div>
+                            <div class="client_detail">
+                                <div class="client_info">
+                                    <a href="govardhan_rao.html">
+                                        <h5>Govardhan Rao</h5>
+                                    </a>
+                                    
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="client_text">
+                            <p>
+                                With over 42 years of experience in management and administration, Govardhan brings valuable insights as an advisor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-      
-      
-      <!-- end contact section -->
-      <!-- footer section -->
-      <footer class="footer_section">
-        <div class="container">
-          <p> &copy; <span id="displayDateYear"></span> All Rights Reserved By <a href="https://ptdc.in">PTDC</a>
-          </p>
-          <p>
-            <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
-          </p>
+  <!-- End Our Team Section -->
+  <!-- professional section -->
+  <section class="professional_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/image.png" alt="Professional Image">
+          </div>
         </div>
-      </footer>
-      <!-- end footer section -->
-      <!-- jQuery and other scripts -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/7H4zII9q5m95Fv3h7PjA7/Jk0DzJ/tI6SgK/J6" crossorigin="anonymous"></script>
-      <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <script src="js/custom.js"></script>
-      <script src="js/jquery-3.4.1.min.js"></script>
-      <script src="js/bootstrap.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- Google Map -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-      <!-- End Google Map -->
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const slider = document.querySelector('.team-slider .row');
-          const prevArrow = document.querySelector('.prev-arrow');
-          const nextArrow = document.querySelector('.next-arrow');
-          let scrollAmount = 0;
-          prevArrow.addEventListener('click', () => {
-            scrollAmount -= 300; // Adjust the value to scroll amount per click
-            slider.scrollTo({
-              left: scrollAmount,
-              behavior: 'smooth'
-            });
-          });
-          nextArrow.addEventListener('click', () => {
-            scrollAmount += 300; // Adjust the value to scroll amount per click
-            slider.scrollTo({
-              left: scrollAmount,
-              behavior: 'smooth'
-            });
-          });
-        });
-      </script>
-      <script>
-        document.getElementById('displayDateYear').textContent = new Date().getFullYear();
-      </script>
-  </body>
+        <div class="col-md-6 ">
+          <div class="detail-box">
+            <h2>
+              Why Choose Us?
+            </h2>
+            <ul>
+              <li><strong>30 Years of Expertise:</strong> With three decades of experience, we bring a deep understanding of teaching, personal development, and content creation to every project.</li>
+              <li><strong>Tailored Solutions:</strong> We understand that every individual and business is unique. Our services are customized to fit your specific needs and objectives.</li>
+              <li><strong>Proven Success:</strong> Our track record speaks for itself. We have helped numerous clients achieve their goals through our focused and effective training and content strategies.</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end professional section -->
+
+  <!-- service section -->
+  <section class="service_section layout_padding">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2> Our Services </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="box">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <h3>Content Writing</h3>
+            <p>Professional content creation that engages your audience and drives results.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <i class="fa fa-laptop" aria-hidden="true"></i>
+            <h3>Training Workshops</h3>
+            <p>Interactive workshops designed to enhance skills and knowledge.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <h3>Personal Development</h3>
+            <p>Guidance and strategies for personal growth and professional success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end service section -->
+    <!-- client section -->
+  <section class="client_section ">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          What Our Clients Say
+        </h2>
+      </div>
+      <div class="carousel-wrap layout_padding2-top ">
+        <div class="owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="client_id">
+                <div class="img-box">
+                  <img src="images/prem.png" alt="">
+                </div>
+                <div class="client_detail">
+                  <div class="client_info">
+                    <h6>
+                      Prem Kumar
+                    </h6>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="client_text">
+                <p>
+                  The personalized training programs from the Professional Training and Development Center were a game-changer for our team. The tailored approach helped us address our specific challenges and achieve significant growth. Highly recommended
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="client_id">
+                <div class="img-box">
+                  <img src="images/pramod.jpg" alt="">
+                </div>
+                <div class="client_detail">
+                  <div class="client_info">
+                    <h6>
+                      Pramod
+                    </h6>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="client_text">
+                <p>
+                  The content created for our website was exceptional. It perfectly captured our brand’s voice and engaged our audience effectively. We saw a noticeable increase in traffic and engagement. Thank you for the outstanding work
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="client_id">
+                <div class="img-box">
+                  <img src="images/anu.jpg" alt="">
+                </div>
+                <div class="client_detail">
+                  <div class="client_info">
+                    <h6>
+                      Anu
+                    </h6>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="client_text">
+                <p>
+                  The workshops provided by the Professional Training and Development Center were incredibly insightful and practical. The skills we gained have already made a positive impact on our team's performance. We look forward to more sessions
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="client_id">
+                <div class="img-box">
+                  <img src="images/divya.jpg" alt="">
+                </div>
+                <div class="client_detail">
+                  <div class="client_info">
+                    <h6>
+                      Divya
+                    </h6>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="client_text">
+                <p>
+                  The content writing services exceeded our expectations. The quality and precision of the content helped us connect better with our audience and strengthen our online presence. We couldn't be happier with the results
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- end client section -->
+   <style>
+    /* Style for input fields and textareas */
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+      color: #000; /* Text color */
+      background-color: #f2f2f2; /* Background color */
+      border: 1px solid #ccc; /* Border color */
+      padding: 10px; /* Padding for input fields */
+      margin: 10px 0; /* Spacing between fields */
+      width: 100%; /* Full width */
+      font-size: 16px; /* Font size */
+      border-radius: 5px; /* Rounded borders */
+    }
+  
+    /* Change placeholder color */
+    input::placeholder,
+    textarea::placeholder {
+      color: #777; /* Placeholder text color */
+    }
+  
+    /* Focused input field */
+    input[type="text"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none; /* Remove default focus outline */
+      border: 1px solid #555; /* Border color on focus */
+      background-color: #ffffff; /* Background color on focus */
+    }
+  
+    /* Style the submit button */
+    button[type="submit"] {
+      background-color: #007bff; /* Button color */
+      color: #fff; /* Text color */
+      border: none;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    button[type="submit"]:hover {
+      background-color: #0056b3; /* Darker button on hover */
+    }
+  </style>
+  
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Contact Us</h2>
+      </div>
+      <form action="https://formsubmit.co/Savithriwork2024@hotmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Name" required />
+        </div>
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Message" required></textarea>
+        </div>
+        <div class="d-flex">
+          <button type="submit">SEND</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- end contact section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="https://ptdc.in">PTDC</a>
+      </p>
+      <p>
+        <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-service.html">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+  <!-- end footer section -->
+
+  <!-- jQuery and other scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/7H4zII9q5m95Fv3h7PjA7/Jk0DzJ/tI6SgK/J6" crossorigin="anonymous"></script>
+  <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+   <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.team-slider .row');
+    const prevArrow = document.querySelector('.prev-arrow');
+    const nextArrow = document.querySelector('.next-arrow');
+
+    let scrollAmount = 0;
+
+    prevArrow.addEventListener('click', () => {
+        scrollAmount -= 300; // Adjust the value to scroll amount per click
+        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    nextArrow.addEventListener('click', () => {
+        scrollAmount += 300; // Adjust the value to scroll amount per click
+        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    });
+});
+</script>
+
+
+
+  <script>
+    document.getElementById('displayDateYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+
 </html>
