@@ -160,18 +160,39 @@
       <!-- end slider section -->
     </div>
     <!-- about section -->
-    <section class="about_section layout_padding-bottom" style="text-align: center;margin-top: 50px;">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-md-7">
-            <div class="detail-box">
-              <h2 style="text-align: center;"> About Us </h2>
-              <p> At the Professional Training and Development Center, we bring 30 years of expertise in education and personal development. Our mission is to empower individuals and organizations to grow through tailored training and expert content services. With a focus on customization, integrity, and excellence, we are your trusted partner in achieving success. </p>
+    <section class="about_section layout_padding-bottom" style="margin-top: 10px;">
+      <div class="container d-flex align-items-center justify-content-center" style="min-height: 10vh;">
+        <div class="row justify-content-center">
+          <div class="col-lg-7 col-md-7 animated-section">
+            <div class="detail-box text-center">
+              <h2>About Us</h2>
+              <p>
+                At the Professional Training and Development Center, we bring 30 years of expertise in education and personal development. 
+                Our mission is to empower individuals and organizations to grow through tailored training and expert content services. 
+                With a focus on customization, integrity, and excellence, we are your trusted partner in achieving success.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const animatedSection = document.querySelector('.animated-section');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animatedSection.classList.add('visible');
+        observer.unobserve(animatedSection);
+      }
+    });
+  });
+
+  observer.observe(animatedSection);
+});
+
+    </script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -181,14 +202,15 @@
       }
 
       .our-team-section {
-        background: $primary1;
-        padding: 50px 0;
+        /* background: $primary1; */
+        padding: 30px 0;
+        margin-top: 0px;
       }
 
       .our-team-section h2 {
         font-size: 2.5rem;
         color: #333;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         font-weight: 600;
         text-align: center;
         text-transform: uppercase;
@@ -646,6 +668,7 @@
             <h2> Meet Our Team </h2>
           </div>
           <div class="carousel-wrap layout_padding2-top ">
+            <!-- <h2> Meet Our Team </h2> -->
             <div class="owl-carousel">
               <!-- paste your content here for adding a new faculty!! -->
               <div class="item">
