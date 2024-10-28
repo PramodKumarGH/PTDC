@@ -154,7 +154,7 @@
       <div class="heading_container heading_center">
         <h2>Contact Us</h2>
       </div>
-      <form action="https://submit-form.com/NolmFKt43" method="POST" onsubmit="clearForm(this)">
+      <form action="https://submit-form.com/NolmFKt43" method="POST" onsubmit="resetFormWithDelay(event, this)">
         <div>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Name" required />
@@ -178,11 +178,26 @@
     </div>
   
     <script>
-      function clearForm(form) {
-        form.reset(); // Reset the form fields
+      function resetFormWithDelay(event, form) {
+        event.preventDefault(); // Prevent form submission for debugging
+        const formData = new FormData(form);
+  
+        // Log form data for debugging purposes
+        for (let [key, value] of formData.entries()) {
+          console.log(`${key}: ${value}`);
+        }
+  
+        // Simulate successful submission and reset form
+        setTimeout(() => {
+          form.reset(); // Reset the form after a brief delay
+        }, 1000); 
+  
+        // In production, comment the next line to allow actual submission
+        // form.submit();
       }
     </script>
   </section>
+  
   
   
   
