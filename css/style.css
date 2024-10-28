@@ -839,6 +839,50 @@ a:focus {
 .footer_section a {
   color: inherit;
 }
+.contact_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread the content across the row */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  padding: 1px 10px;
+  gap: 10px; /* Adds spacing between elements */
+}
+
+.contact_nav a {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spacing between icon and text */
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.social_media {
+  display: flex;
+  gap: 10px; /* Spacing between social icons */
+  margin-left: auto; /* Pushes social icons to the right */
+}
+
+.social_media a {
+  font-size: 20px;
+  color: #333;
+}
+
+.social_media a:hover {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .contact_nav {
+    flex-direction: column; /* Stack content on smaller screens */
+    align-items: flex-start;
+  }
+
+  .social_media {
+    margin-left: 0; /* Reset margin for smaller screens */
+  }
+}
+
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
