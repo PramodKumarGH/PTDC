@@ -439,6 +439,7 @@ a:focus {
 
 .professional_section {
   background-color: #d1e3ff;
+  margin-top: 40px; /* Adjust the value as needed */
 }
 
 .professional_section .row {
