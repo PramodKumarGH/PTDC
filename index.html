@@ -142,13 +142,12 @@
       </header>
       <!-- end header section -->
       <!-- slider section -->
-      <section class="slider_section ">
-        <div class="container ">
+      <section class="slider_section">
+        <div class="container">
           <div class="row">
             <div class="col-md-6">
               <div class="detail-box">
-                <h1> Professional Training <br> and Development Center <br>
-                </h1>
+                <h1> Professional Training <br> and Development Center <br></h1>
                 <p> At the Professional Training and Development Center, we leverage 30 years of experience to empower individuals and organizations through expert training and content services, helping them reach their full potential. </p>
                 <a href="contact.html"> Contact Us </a>
               </div>
@@ -161,6 +160,39 @@
           </div>
         </div>
       </section>
+      
+      <style>
+        /* Add the CSS animations here */
+        .slider_section {
+          opacity: 0; /* Start with invisible */
+          transform: translateY(20px); /* Move down */
+          transition: opacity 0.6s ease, transform 0.6s ease; /* Animation properties */
+        }
+      
+        .slider_section.visible {
+          opacity: 1; /* Make visible */
+          transform: translateY(0); /* Reset position */
+        }
+      </style>
+      
+      <script>
+        // Add the JavaScript for the intersection observer
+        document.addEventListener("DOMContentLoaded", function () {
+          const sliderSection = document.querySelector(".slider_section");
+      
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                sliderSection.classList.add("visible"); // Add class when in view
+                observer.unobserve(sliderSection); // Stop observing after adding class
+              }
+            });
+          });
+      
+          observer.observe(sliderSection); // Start observing
+        });
+      </script>
+      
       <!-- end slider section -->
     </div>
     <!-- about section -->
