@@ -890,6 +890,9 @@
                   <li>
                     <strong>Proven Success:</strong> Our track record speaks for itself. We have helped numerous clients achieve their goals through our focused and effective training and content strategies.
                   </li>
+                  <li>
+                    <strong>Innovative Approach:</strong> We stay ahead of industry trends and leverage the latest tools and methodologies to ensure our solutions are impactful, future-ready, and aligned with evolving market demands.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -1133,6 +1136,148 @@
       </script>
       
       <!-- end client section -->
+       <!-- FAQ Section -->
+<section class="faq_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq_container">
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>What services do you offer?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>We offer a wide range of training programs, workshops, and content development services tailored to meet your needs.</p>
+        </div>
+      </div>
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>What types of training programs are offered by PTDC?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>PTDC provides a variety of workshops, including coaching and mentoring, customer service, corporate reception, project management, communication skills, and more. Each program is designed to enhance professional skills for different industries.</p>
+        </div>
+      </div>
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>Are the workshops available online?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>Yes, several workshops, such as MS Excel, coaching & mentoring, and communication skills, are conducted online to cater to remote learners.</p>
+        </div>
+      </div>
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>What is the typical batch size for workshops?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>Most online workshops are conducted in small batches, typically with a maximum of 16 participants, to ensure personalized attention and effective learning outcomes.</p>
+        </div>
+      </div>
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>What are the fees for participating in the workshops?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>The fees vary by workshop. For example, a coaching and mentoring session costs around ₹750 per participant. You can explore individual course pages on the PTDC website for exact details.</p>
+        </div>
+      </div>
+      <div class="faq_item">
+        <button class="faq_button">
+          <span>Who can benefit from PTDC’s training programs?</span> <i class="fa fa-plus"></i>
+        </button>
+        <div class="faq_answer">
+          <p>The programs are ideal for professionals in roles such as HR, teaching, project management, customer care, hospitality, and more. They are tailored to meet the needs of individuals aiming for career growth or business performance improvement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CSS to Adjust Space -->
+<style>
+  .layout_padding {
+    padding-bottom: 50px; /* Reduce padding at the bottom of FAQ */
+  }
+
+  .contact_section {
+    margin-top: 10px; /* Remove extra top margin between sections */
+    padding-top: 100px; /* Optional: Small padding to ensure clean look */
+  }
+</style>
+<!-- Add CSS and JS for FAQ functionality -->
+<style>
+  /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* FAQ Section Styles */
+.faq_answer {
+  display: none;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #333; /* Neutral dark for readability */
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.faq_answer.active {
+  opacity: 1;
+  max-height: 500px; /* Set max height to fit content */
+}
+
+.faq_button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #F0F8FF;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.faq_button:hover {
+  background-color: #E0F0FF;
+}
+
+.faq_button i {
+  transition: transform 0.3s ease;
+}
+
+.faq_button.active i {
+  transform: rotate(45deg);
+}
+
+</style>
+
+<script>
+  // Toggle FAQ answer visibility
+  document.querySelectorAll('.faq_button').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
+
+    button.classList.toggle('active');
+    answer.classList.toggle('active'); // Toggle visibility with class
+
+    // Handle accessibility and smooth expansion
+    if (answer.classList.contains('active')) {
+      answer.style.display = 'block';
+    } else {
+      setTimeout(() => (answer.style.display = 'none'), 300);
+    }
+  });
+});
+
+</script>
       <style>
         /* Style for input fields and textareas */
         input[type="text"],
