@@ -502,6 +502,8 @@ a:focus {
 
 .service_section {
   position: relative;
+  margin-top: 0px;
+  padding: 30px;
 }
 
 .service_section .box {
@@ -679,6 +681,9 @@ a:focus {
   margin-bottom: 30px;
 }
 
+.contact_section {
+ padding: 30px;
+}
 .contact_section input {
   width: 100%;
   border: none;
