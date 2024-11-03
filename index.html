@@ -113,15 +113,15 @@
         </div>
         <div class="header_bottom">
           <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg custom_nav-container">
+            <nav class="navbar navbar-expand-lg navbar-light custom_nav-container">
               <a class="navbar-brand" href="index.html" aria-label="Homepage">
                 <img src="images/new_logo.png" alt="Professional Training and Development Center Logo" class="logo">
               </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class=""></span>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
                   <li class="nav-item active">
                     <a class="nav-link" href="index.html">Home</a>
                   </li>
@@ -138,8 +138,22 @@
               </div>
             </nav>
           </div>
-        </div>
+        </div>        
       </header>
+      <style>
+        .custom_nav-container .navbar-brand .logo {
+  max-width: 150px;
+}
+
+/* Adjust margin and padding for nav links on smaller screens */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+}
+
+      </style>
       <!-- end header section -->
       <!-- slider section -->
       <section class="slider_section">
