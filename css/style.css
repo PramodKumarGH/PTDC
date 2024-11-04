@@ -954,6 +954,8 @@ a:focus {
 
 .square-box {
 
+  color: inherit; /* Ensures text inside doesn't inherit anchor link color */
+
   width: 100%;  /* Fixed width */
 
   height: 100%; /* Auto height for flexibility */
@@ -1031,7 +1033,7 @@ a:focus {
 
 
 .header_section {
-  background-color: #fff;
+  background-color: #d1e3ff;
 }
 
 .header_top {
