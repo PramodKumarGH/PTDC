@@ -6752,6 +6752,7 @@ button.bg-dark:focus {
 .d-flex {
   display: -ms-flexbox !important;
   display: flex !important;
+  padding-bottom: 15px;
 }
 
 .d-inline-flex {
