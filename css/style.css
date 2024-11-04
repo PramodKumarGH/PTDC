@@ -1091,7 +1091,7 @@ a:focus {
   display: flex;
   justify-content: center; /* Centers the image horizontally */
   align-items: center;     /* Centers the image vertically */
-  height: 150px;           /* Set a fixed height as needed */
+            /* Set a fixed height as needed */
   overflow: hidden;        /* To keep the image neatly contained */
   margin: 0 auto;          /* Center container in its parent */
 }
