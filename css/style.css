@@ -1085,3 +1085,22 @@ a:focus {
     max-width: 80px;
   }
 }
+
+/* Image Box Styling */
+.img-box {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center;     /* Centers the image vertically */
+  height: 150px;           /* Set a fixed height as needed */
+  overflow: hidden;        /* To keep the image neatly contained */
+  margin: 0 auto;          /* Center container in its parent */
+}
+
+/* Image Styling */
+.img-box img {
+  max-width: 100%;         /* Ensures the image scales down but doesn't exceed the box */
+  max-height: 100%;        /* Ensures the image doesn't exceed the box vertically */
+  width: auto;
+  height: auto;
+}
+
