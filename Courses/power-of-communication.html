@@ -9,98 +9,85 @@
   <style>
     /* General Styles */
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
-      background-color: #f4f4f4;
+      background-color: #f5f7fa;
     }
 
+    /* Header Section */
     .workshop-header {
-      background: linear-gradient(135deg, #77b5fe 0%, #afd7ff 100%); /* Light blue gradient */
-      height: 300px;
-      color: white;
+      background: linear-gradient(135deg, #5a98f2, #8eadeb); /* Gradient for a modern look */
+      height: 280px;
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .workshop-header h1 {
       font-size: 3rem;
-      animation: slideInDown 1.5s ease-out;
+      margin: 0;
+      font-weight: bold;
+      animation: slideInDown 1s ease-out;
     }
 
+    /* Content Section */
     .content-section {
-      padding: 50px 0;
-      animation: fadeInUp 2s ease-in-out;
+      padding: 60px 0;
+      color: #555;
     }
 
     .content-section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #2196f3; /* Light blue for headings */
-      border-bottom: 2px solid #2196f3;
-      padding-bottom: 10px;
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+      color: #004aad; /* Refined blue for headings */
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 8px;
+      font-weight: 600;
       display: inline-block;
-      animation: fadeIn 2s ease-in-out;
+      animation: fadeIn 1s ease-in-out;
     }
 
-    .content-section ul,
-    .content-section p {
-      margin-bottom: 20px;
+    .content-section p, .content-section ul {
       font-size: 1.1rem;
-    }
-
-    /* Center-align the h5 heading */
-    .centered-heading {
-      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
 
     /* Animations */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-100px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Buttons */
     .btn-primary {
-      background-color: #2196f3; /* Light blue button */
-      border-color: #2196f3;
-      padding: 10px 20px;
+      background-color: #004aad;
+      border-color: #004aad;
+      padding: 12px 24px;
       font-size: 1rem;
       text-transform: uppercase;
-      transition: background-color 0.3s ease;
-      animation: fadeIn 2s ease-in-out;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 74, 173, 0.2);
     }
 
     .btn-primary:hover {
-      background-color: #1976d2; /* Darker blue on hover */
+      background-color: #00377d;
+      border-color: #00377d;
+      box-shadow: 0 6px 14px rgba(0, 74, 173, 0.4);
     }
 
     /* Styling Lists */
@@ -109,12 +96,31 @@
       animation: fadeInUp 1s ease;
     }
 
+    /* Card Styles for Workshop Details */
+    .details-card {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .details-card h2 {
+      font-size: 1.6rem;
+      color: #004aad;
+    }
+
+    .details-card:hover {
+      transform: translateY(-5px);
+    }
+
     /* Footer */
     .footer {
-      padding: 20px;
-      background-color: #2196f3; /* Light blue footer */
+      padding: 25px;
+      background-color: #004aad;
       color: white;
       text-align: center;
+      font-size: 0.9rem;
     }
 
     .footer p {
@@ -133,13 +139,13 @@
   <div class="container content-section">
     <div class="row">
       <div class="col-md-8">
-        <h2 class="centered-heading">For Whom?</h2>
+        <h2>For Whom?</h2>
         <p>Students, executives, managers, or any professional in sales, marketing, teaching, training, or facilitating roles.</p>
 
-        <h2 class="centered-heading">Organiser and Certificate</h2>
+        <h2>Organiser and Certificate</h2>
         <p>Organised by Professional Training and Development Centre, Bengaluru.</p>
 
-        <h2 class="centered-heading">Contents:</h2>
+        <h2>Contents:</h2>
         <ul>
           <li>Communication Skillset Overview</li>
           <li>Globalisation and Communication Style Changes</li>
@@ -150,24 +156,24 @@
           <li>Preparing a Video Resume (Theory and Practice)</li>
         </ul>
 
-        <h2 class="centered-heading">Methodology</h2>
+        <h2>Methodology</h2>
         <p>
           The program will be highly participative, delivered using various media by expert faculty with international exposure. Participants will receive useful books and training materials.
         </p>
 
-        <h2 class="centered-heading">Duration and Venue</h2>
+        <h2>Duration and Venue</h2>
         <p>Duration: 6 hours online</p>
         <p>Batch Size: Minimum 12, Maximum 20 participants</p>
 
-        <h2 class="centered-heading">Program Fees</h2>
+        <h2>Program Fees</h2>
         <p>Rs. 1000/- per participant</p>
 
-        <h2 class="centered-heading">Benefits</h2>
+        <h2>Benefits</h2>
         <p>
           Effective communication is essential for navigating global connections and cultural diversity. This program sharpens the skills necessary to meet today's communication demands.
         </p>
 
-        <h2 class="centered-heading">Objectives</h2>
+        <h2>Objectives</h2>
         <ul>
           <li>Explain the importance of communication skills in a global business environment.</li>
           <li>Identify the skillset required for effective communication.</li>
@@ -183,18 +189,20 @@
         <a href="https://forms.gle/ufSoAt1yqfhfHApk6" class="btn btn-primary">Register Now</a>
       </div>
       <div class="col-md-4">
-        <h2 class="centered-heading">Workshop Details</h2>
-        <ul>
-          <li>Duration: 6 hours online</li>
-          <li>Fees: Rs. 1000/- per participant</li>
-          <li>Batch Size: Minimum 12, Maximum 20 participants</li>
-        </ul>
+        <div class="details-card">
+          <h2>Workshop Details</h2>
+          <ul>
+            <li>Duration: 6 hours online</li>
+            <li>Fees: Rs. 1000/- per participant</li>
+            <li>Batch Size: Minimum 12, Maximum 20 participants</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Footer Section -->
-  <footer class="footer text-center">
+  <footer class="footer">
     <p>&copy; 2024 Professional Training and Development Centre, Bengaluru. All rights reserved.</p>
   </footer>
 
