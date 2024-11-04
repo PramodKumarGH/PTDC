@@ -3,112 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anurag Mohit - Profile</title>
+    <title>Dr. S Govardhan Rao - Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Resetting Default Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #2563eb;
+            --gradient-start: #3b82f6;
+            --gradient-end: #1d4ed8;
+            --surface: #ffffff;
+            --background: #f8fafc;
+            --text: #0f172a;
+            --text-secondary: #475569;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background: var(--background);
+            min-height: 100vh;
+            padding: 2rem;
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            line-height: 1.7;
         }
 
         .profile-page {
-            max-width: 800px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
         }
 
         .profile-header {
-            text-align: center;
-            background: linear-gradient(135deg, #0072ff, #00c6ff);
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-            color: #ffffff;
-        }
-
-        .profile-header p {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .profile-content {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 20px;
+            align-items: center;
+            gap: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
 
         .profile-image {
-            flex: 1;
-            text-align: center;
+            position: relative;
+            width: 180px;
+            height: 180px;
+            flex-shrink: 0;
+        }
+
+        .profile-image::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            z-index: -1;
         }
 
         .profile-image img {
-            max-width: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            border: 4px solid var(--surface);
         }
 
-        .profile-image img:hover {
-            transform: scale(1.05);
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
         }
 
-        .profile-details {
-            flex: 2;
+        .header-content .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
         }
 
-        .profile-details p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #333;
-            text-align: justify;
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
         }
 
-        .experience-section p {
-            margin-bottom: 8px;
-            background: #f1f1f1;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .about-section, .experience-section {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary);
+        }
+
+        .about-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .experience-card {
+            background: rgba(37, 99, 235, 0.03);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 4px 6px -1px rgba(37, 99, 235, 0.1),
+                0 2px 4px -2px rgba(37, 99, 235, 0.1);
+        }
+
+        .experience-card h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(37, 99, 235, 0.03);
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="profile-page">
-        <div class="profile-header">
-            <p>Govardhan Rao</p>
-        </div>
-        <div class="profile-content">
+        <header class="profile-header">
             <div class="profile-image">
-                <img src="../images/faculty/govardhan_rao.png" alt="Govardhan Rao">
+                <img src="../images/faculty/govardhan_rao.png" alt="Dr. S Govardhan Rao">
             </div>
-            <div class="profile-details">
-                <p>Dr. S Govardhan Rao is the Ex-Registrar of the prestigious National Institute of Technology, Warangal from 24th May 2018 to 23rd May 2023. Before that, he was the senior-most Officer of the Administrative Cadre of the Department of Atomic Energy holding the positions different positions, which include Head, Personnel Division, Director (P & A) and Dy. Chief Executive in the Units of the Department like Bhabha Atomic Research Centre, Mumbai, Nuclear Fuel Complex, Hyderabad and Indira Gandhi Centre for Atomic Research, Kalpakkam. He has over 42 years of experience in handling Management, Administration, Vigilance, Legal, Estate, Material Management and Financial matters. </p>
+            <div class="header-content">
+                <h1>Dr. S Govardhan Rao</h1>
+                <p class="subtitle">Ex-Registrar NIT Warangal | Administrative Expert | PhD in Management</p>
+            </div>
+        </header>
 
+        <div class="content-grid">
+            <div class="about-section">
+                <div class="section-title">
+                    <i class="fas fa-user"></i>
+                    About
+                </div>
+                <p>Dr. S Govardhan Rao is the Ex-Registrar of the prestigious National Institute of Technology, Warangal from 24th May 2018 to 23rd May 2023. Before that, he was the senior-most Officer of the Administrative Cadre of the Department of Atomic Energy holding the positions different positions, which include Head, Personnel Division, Director (P & A) and Dy. Chief Executive in the Units of the Department like Bhabha Atomic Research Centre, Mumbai, Nuclear Fuel Complex, Hyderabad and Indira Gandhi Centre for Atomic Research, Kalpakkam.</p>
+                
                 <p>He has varied qualifications, which include a PhD in Management from Pondicherry Central University, a Master of Business Laws from National Law School, Bangalore, a Post Graduate Diploma in Patents Law from NALSAR, and a Post-Graduation in Public Policy & Management from IIM, Bangalore. As a part of this Course, he has studied one term on International Public Policy at Syracuse University, New York.</p>
 
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">42+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years as Registrar</div>
+                    </div>
+                </div>
+            </div>
 
-                <p style="font-weight: bold; color: #0072ff;">Experience:</p>
-                <div class="experience-section">
-                    <p>Ex-Registrar of NIT Warangal.</p>
-                    <p>42+ years of experience in management.</p>
-                    <p>PhD in Management.</p>
+            <div class="experience-section">
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Experience & Education
+                </div>
+                <div class="experience-card">
+                    <h3>Ex-Registrar</h3>
+                    <p>National Institute of Technology, Warangal</p>
+                </div>
+                <div class="experience-card">
+                    <h3>PhD in Management</h3>
+                    <p>Pondicherry Central University</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Senior Officer</h3>
+                    <p>Department of Atomic Energy</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Post Graduate</h3>
+                    <p>Public Policy & Management, IIM Bangalore</p>
                 </div>
             </div>
         </div>

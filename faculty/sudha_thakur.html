@@ -4,107 +4,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sudha Thakur - Profile</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Resetting Default Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --primary: #2563eb;
+            --gradient-start: #3b82f6;
+            --gradient-end: #1d4ed8;
+            --surface: #ffffff;
+            --background: #f8fafc;
+            --text: #0f172a;
+            --text-secondary: #475569;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background: var(--background);
+            min-height: 100vh;
+            padding: 2rem;
+            display: grid;
+            place-items: center;
+            color: var(--text);
+            line-height: 1.7;
         }
 
         .profile-page {
-            max-width: 800px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
         }
 
         .profile-header {
-            text-align: center;
-            background: linear-gradient(135deg, #0072ff, #00c6ff);
-            padding: 20px;
-            border-radius: 10px 10px 0 0;
-            color: #ffffff;
-        }
-
-        .profile-header p {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .profile-content {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 20px;
+            align-items: center;
+            gap: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
 
         .profile-image {
-            flex: 1;
-            text-align: center;
+            position: relative;
+            width: 180px;
+            height: 180px;
+            flex-shrink: 0;
+        }
+
+        .profile-image::after {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            z-index: -1;
         }
 
         .profile-image img {
-            max-width: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            border: 4px solid var(--surface);
         }
 
-        .profile-image img:hover {
-            transform: scale(1.05);
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
         }
 
-        .profile-details {
-            flex: 2;
+        .header-content .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
         }
 
-        .profile-details p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #333;
-            text-align: justify;
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
         }
 
-        .experience-section p {
-            margin-bottom: 8px;
-            background: #f1f1f1;
-            padding: 10px 15px;
-            border-radius: 5px;
-            color: #333;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .about-section, .experience-section {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary);
+        }
+
+        .about-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .experience-card {
+            background: rgba(37, 99, 235, 0.03);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 4px 6px -1px rgba(37, 99, 235, 0.1),
+                0 2px 4px -2px rgba(37, 99, 235, 0.1);
+        }
+
+        .experience-card h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(37, 99, 235, 0.03);
+            border-radius: 16px;
+            padding: 1.25rem;
+            text-align: center;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="profile-page">
-        <div class="profile-header">
-            <p>Sudha Thakur</p>
-        </div>
-        <div class="profile-content">
+        <header class="profile-header">
             <div class="profile-image">
                 <img src="../images/faculty/sudha_thakur.png" alt="Sudha Thakur">
             </div>
-            <div class="profile-details">
-                <p>Ms. Sudha Thakur is a dynamic entrepreneur, a perceptive visionary and a passionate trainer & coach. The highlights of her qualifications are MBA (HR) from University of Dublin, Post Graduate Diploma in Hospitality, University of Chichester, Cambridge University Led certification (Finance), BSc in Hospitality and Hotel Administration from IHM, Chandigarh, India, NVQ (Information Technology), Qualified PTTLLS, UK  Trainer, Certificate in Train the Trainer and over a decade’s professional expertise in business development, hospitality and services including process automation and customer relationship management in star hotel properties & leading corporate organisations. </p>
-                <p style="font-weight: bold; color: #0072ff;">Experience:</p>
-                <div class="experience-section">
-                    <p>MBA (HR) and certifications in Hospitality and Finance</p>
-                    <p>10+ years in business development and hospitality.</p>
-                    <p>Certified PTTLLS and "Train the Trainer."</p>
+            <div class="header-content">
+                <h1>Sudha Thakur</h1>
+                <p class="subtitle">Entrepreneur | Business Development Professional | Hospitality Expert</p>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <div class="about-section">
+                <div class="section-title">
+                    <i class="fas fa-user"></i>
+                    About
+                </div>
+                <p>Ms. Sudha Thakur is a dynamic entrepreneur, a perceptive visionary and a passionate trainer & coach. The highlights of her qualifications are MBA (HR) from the University of Dublin, Post-Graduate Diploma in Hospitality, the University of Chichester, Cambridge University Led certification (Finance), BSc in Hospitality and Hotel Administration from IHM, Chandigarh, India, NVQ (Information Technology), Qualified PTTLLS, UK  Trainer, Certificate in Train the Trainer and over a decade’s professional expertise in business development, hospitality and services including process automation and customer relationship management in star hotel properties & leading corporate organisations.</p>
+                
+    
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Professional Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Professional Certifications</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-section">
+                <div class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Qualifications & Expertise
+                </div>
+                <div class="experience-card">
+                    <h3>Education</h3>
+                    <p>MBA (HR) - University of Dublin</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Hospitality</h3>
+                    <p>PG Diploma - University of Chichester</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Finance</h3>
+                    <p>Cambridge University Led Certification</p>
+                </div>
+                <div class="experience-card">
+                    <h3>Training Certification</h3>
+                    <p>PTTLLS, UK & Train the Trainer</p>
                 </div>
             </div>
         </div>
