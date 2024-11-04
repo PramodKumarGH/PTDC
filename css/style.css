@@ -85,6 +85,7 @@ a:focus {
 .hero_area {
   position: relative;
   background-color: #d1e3ff;
+  height: 570px;
 }
 
 .header_section .container-fluid {
