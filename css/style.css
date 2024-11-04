@@ -962,6 +962,8 @@ a:focus {
 
   display: flex;
 
+  text-align: center;
+  
   flex-direction: column;
 
   justify-content: center;
