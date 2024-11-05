@@ -244,6 +244,47 @@
         <div class="btn-box"></div>
       </div>
     </section>
+    <style>
+      .service_section {
+        opacity: 0;
+        /* Initial hidden state */
+        transform: translateY(20px);
+        /* Slight move downwards */
+        animation: fadeInUp 1s ease forwards;
+        /* Trigger the animation */
+        animation-delay: 0.3s;
+        /* Optional: Delay the animation slightly */
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+          /* Start lower */
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+          /* End at original position */
+        }
+      }
+
+      .box {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        opacity: 0.9;
+        /* Initial slightly faded state */
+      }
+
+      .box:hover {
+        transform: translateY(-5px);
+        /* Lift */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        /* Shadow */
+        opacity: 1;
+        /* Fully visible on hover */
+      }
+    </style>
     <a href="https://wa.me/+919869478843" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background-color: transparent; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 1000; transition: transform 0.3s ease-in-out; transform: scale(1);" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
       <img src="images/whatsapp.png" alt="WhatsApp" style="width: 60px; height: 60px;" data-no-retina="">
     </a>

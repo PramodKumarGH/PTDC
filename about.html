@@ -338,74 +338,112 @@
       </div>
     </section>
     <style>
+      /* Section Animation */
+      .about_section {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+
+      /* Fade-in effect for each program box */
       .program_box {
-  background: linear-gradient(135deg, #ffffff, #f8f9fa);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
-  height: 200px;
-}
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 1px solid #e0e0e0;
+        height: 200px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 0.8s ease forwards;
+        animation-delay: calc(0.1s * var(--i));
+      }
 
-.program_box h5 {
-  color: #333333;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
-}
+      /* Program Box Heading */
+      .program_box h5 {
+        color: #333333;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        transition: color 0.3s ease;
+      }
 
-.program_box p {
-  color: #666666;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 10px 0;
-}
+      /* Program Box Paragraph */
+      .program_box p {
+        color: #666666;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 10px 0;
+      }
 
-.program_box a {
-  text-decoration: none;
-}
+      /* Hover effect */
+      .program_box:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+        border-color: #dcdcdc;
+      }
 
-.program_box:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-  border-color: #dcdcdc;
-}
+      /* Hover effect on heading */
+      .program_box:hover h5 {
+        color: #0056b3;
+      }
 
-.program_box:hover h5 {
-  color: #0056b3;
-}
+      /* Hover effect on paragraph */
+      .program_box:hover p {
+        color: #444444;
+      }
 
-.program_box:hover p {
-  color: #444444;
-}
+      /* Button-like style for links */
+      .program_box a h5 {
+        position: relative;
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 5px;
+        background: #0083b3;
+        color: #ffffff;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
 
-/* Custom button style */
-.program_box a h5 {
-  position: relative;
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background: #0083b3;
-  color: #ffffff;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
+      /* Hover effect for button-like heading */
+      .program_box:hover a h5 {
+        background: #e0e8e8;
+        transform: scale(1.05);
+      }
 
-.program_box:hover a h5 {
-  background: #e0e8e8;
-  transform: scale(1.05);
-}
+      /* Fade-in animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .program_box {
-    margin-bottom: 20px;
-  }
-}
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
+      /* Fade-up animation for about section */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .program_box {
+          margin-bottom: 20px;
+        }
+      }
     </style>
     <a href="https://wa.me/+919869478843" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background-color: transparent; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; z-index: 1000; transition: transform 0.3s ease-in-out; transform: scale(1);" onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
       <img src="images/whatsapp.png" alt="WhatsApp" style="width: 60px; height: 60px;" data-no-retina="">
