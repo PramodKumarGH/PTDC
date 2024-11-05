@@ -100,12 +100,21 @@
             </div>
             <div class="col-md-6">
               <div class="img-box">
-                <img src="images/photo.png" alt="Professional Training and Development Center Image">
+                <img src="images/photo.png" alt="Professional Training and Development Center Image" class="img-fluid hide-on-mobile">
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <style>
+        @media (max-width: 768px) {
+          .hide-on-mobile {
+            display: none; /* Hide only the specific image on mobile devices */
+          }
+        }
+      </style>
+      
       <!-- end slider section -->
       <script>
         // JavaScript for intersection observer on slider
@@ -266,6 +275,7 @@
         </div>
       </div>
     </section>
+    
     <script>
       // Add the JavaScript for the intersection observer
       document.addEventListener("DOMContentLoaded", function() {
@@ -281,6 +291,21 @@
         observer.observe(clientSection); // Start observing
       });
     </script>
+    <style>
+      @media (max-width: 768px) {
+        .about_section {
+          margin-bottom: 0; /* Remove bottom margin on mobile */
+        }
+    
+        .client_sections {
+          margin-top: 10px; /* Optional: adjust top margin for spacing */
+        }
+    
+        .layout_padding-bottom {
+          padding-bottom: 10px; /* Optional: adjust bottom padding for mobile */
+        }
+      }
+    </style>
     <!-- End Our Team Section -->
     <!-- professional section -->
     <section class="professional_section layout_padding">
